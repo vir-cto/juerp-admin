@@ -1,0 +1,214 @@
+JUERP ADMIN
+│
+├── .env.local
+├── .gitignore
+├── .prettierrc
+├── next.config.mjs
+├── package.json
+├── postcss.config.js
+├── tsconfig.json
+├── STRUCTURE_ONLY.txt
+│
+├── public/
+│   ├── icons/
+│   ├── images/
+│   └── logos/
+│
+└── src/
+    │
+    ├── app/
+    │   ├── layout.tsx
+    │   ├── page.tsx
+    │   ├── globals.css
+    │   │
+    │   ├── login/
+    │   │   └── page.tsx
+    │   │
+    │   ├── dashboard/
+    │   │   └── page.tsx
+    │   │
+    │   ├── control-room/
+    │   │   └── page.tsx
+    │   │
+    │   ├── orders/
+    │   │   ├── page.tsx
+    │   │   └── [orderId]/
+    │   │       └── page.tsx
+    │   │
+    │   ├── vendors/
+    │   │   ├── page.tsx
+    │   │   └── [vendorId]/
+    │   │       └── page.tsx
+    │   │
+    │   ├── captains/
+    │   │   ├── page.tsx
+    │   │   └── [captainId]/
+    │   │       └── page.tsx
+    │   │
+    │   ├── users/
+    │   │   ├── page.tsx
+    │   │   └── [userId]/
+    │   │       └── page.tsx
+    │   │
+    │   ├── bookings/
+    │   │   └── page.tsx
+    │   │
+    │   ├── rides/
+    │   │   └── page.tsx
+    │   │
+    │   ├── deliveries/
+    │   │   └── page.tsx
+    │   │
+    │   ├── settlements/
+    │   │   └── page.tsx
+    │   │
+    │   ├── ledger/
+    │   │   └── page.tsx
+    │   │
+    │   ├── payments/
+    │   │   └── page.tsx
+    │   │
+    │   ├── refunds/
+    │   │   └── page.tsx
+    │   │
+    │   ├── commission/
+    │   │   └── page.tsx
+    │   │
+    │   ├── kyc/
+    │   │   └── page.tsx
+    │   │
+    │   ├── hierarchy/
+    │   │   └── page.tsx
+    │   │
+    │   ├── notifications/
+    │   │   └── page.tsx
+    │   │
+    │   ├── support/
+    │   │   └── page.tsx
+    │   │
+    │   ├── audit/
+    │   │   └── page.tsx
+    │   │
+    │   └── settings/
+    │       └── page.tsx
+    │
+    ├── components/
+    │   │
+    │   ├── common/
+    │   │   ├── Button.tsx
+    │   │   ├── Modal.tsx
+    │   │   ├── StatusBadge.tsx
+    │   │   ├── LoadingState.tsx
+    │   │   ├── EmptyState.tsx
+    │   │   └── ErrorState.tsx
+    │   │
+    │   ├── layout/
+    │   │   ├── AdminLayout.tsx
+    │   │   ├── Sidebar.tsx
+    │   │   ├── Header.tsx
+    │   │   └── Breadcrumbs.tsx
+    │   │
+    │   ├── control-room/
+    │   │   ├── ControlRoom.tsx
+    │   │   ├── OrdersPanel.tsx
+    │   │   ├── CaptainPanel.tsx
+    │   │   └── DispatchPanel.tsx
+    │   │
+    │   ├── orders/
+    │   │   ├── OrderTable.tsx
+    │   │   ├── OrderDetails.tsx
+    │   │   ├── OrderStatusTimeline.tsx
+    │   │   └── OrderFilters.tsx
+    │   │
+    │   ├── vendors/
+    │   │   ├── VendorTable.tsx
+    │   │   ├── VendorDetails.tsx
+    │   │   └── VendorKycStatus.tsx
+    │   │
+    │   ├── captains/
+    │   │   ├── CaptainTable.tsx
+    │   │   ├── CaptainDetails.tsx
+    │   │   └── CaptainLocation.tsx
+    │   │
+    │   ├── finance/
+    │   │   ├── LedgerTable.tsx
+    │   │   ├── SettlementTable.tsx
+    │   │   ├── PaymentTable.tsx
+    │   │   └── RefundTable.tsx
+    │   │
+    │   ├── overrides/
+    │   │   ├── CaptainReassignModal.tsx
+    │   │   ├── ForceCancelModal.tsx
+    │   │   └── ManualRefundModal.tsx
+    │   │
+    │   ├── kyc/
+    │   │   ├── KycTable.tsx
+    │   │   ├── KycDetails.tsx
+    │   │   └── KycReviewModal.tsx
+    │   │
+    │   ├── notifications/
+    │   │   ├── NotificationPanel.tsx
+    │   │   └── NotificationItem.tsx
+    │   │
+    │   └── audit/
+    │       ├── AuditTable.tsx
+    │       └── AuditDetails.tsx
+    │
+    ├── hooks/
+    │   ├── useAuthScope.ts
+    │   ├── useScope.ts
+    │   ├── useCommissionRules.ts
+    │   ├── useLedgerAudit.ts
+    │   ├── useLiveMapData.ts
+    │   ├── useRealtimeOrders.ts
+    │   ├── useHierarchy.ts
+    │   ├── useNotifications.ts
+    │   └── useAuditLogs.ts
+    │
+    ├── lib/
+    │   │
+    │   ├── firebase/
+    │   │   ├── config.ts
+    │   │   ├── auth.ts
+    │   │   ├── firestore.ts
+    │   │   └── realtime.ts
+    │   │
+    │   ├── cashfree/
+    │   │   ├── types.ts
+    │   │   ├── audit-client.ts
+    │   │   └── reconciliation.ts
+    │   │
+    │   ├── constants/
+    │   │   ├── hierarchy.ts
+    │   │   ├── order-status.ts
+    │   │   ├── roles.ts
+    │   │   └── modules.ts
+    │   │
+    │   ├── math/
+    │   │   ├── commission-calculator.ts
+    │   │   └── rounding.ts
+    │   │
+    │   └── utils/
+    │       ├── currency.ts
+    │       ├── date.ts
+    │       ├── export-csv.ts
+    │       └── validation.ts
+    │
+    ├── store/
+    │   ├── authStore.ts
+    │   ├── controlRoomStore.ts
+    │   ├── notificationStore.ts
+    │   └── scopeStore.ts
+    │
+    └── types/
+        ├── audit.ts
+        ├── commission.ts
+        ├── hierarchy.ts
+        ├── ledger.ts
+        ├── order.ts
+        ├── user.ts
+        ├── vendor.ts
+        ├── captain.ts
+        ├── payment.ts
+        ├── settlement.ts
+        └── notification.ts
