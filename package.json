@@ -15,17 +15,19 @@
     "firebase": "^12.4.0",
     "firebase-admin": "^14.5.0",
     "lucide-react": "^1.61.0",
-    "next": "15.5.27",
+    "next": "^15.5.28",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.13",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^24.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "lightningcss": "^1.33.0",
     "prettier": "^3.6.2",
-    "typescript": "^5.9.0"
+    "typescript": "^5.9.0",
+    "wrangler": "^4.152.0"
   }
 }
